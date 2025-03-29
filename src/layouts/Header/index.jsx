@@ -3,6 +3,7 @@ import Logo from "./logo";
 import Navbar from "./navbar";
 import styled from "styled-components";
 import Button from "./contact";
+import Menu from "./Menu";
 
 const StyledHeader = styled.header`
   display: flex;
@@ -16,7 +17,8 @@ const Header = () => {
     <StyledHeader>
       <Logo />
       <Navbar />
-      <Button/>
+      <Button />
+      <Menu />
     </StyledHeader>
   );
 };

@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const StyledNavbar = styled.nav`
   ul {
@@ -40,8 +40,10 @@ const StyledNavbar = styled.nav`
       }
     }
   }
+  @media only screen and (max-width: 650px) {
+    display: none;
+  }
 `;
-
 
 const Navbar = () => {
   return (
@@ -59,6 +61,6 @@ const Navbar = () => {
       </ul>
     </StyledNavbar>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

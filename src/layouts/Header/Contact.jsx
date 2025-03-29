@@ -5,7 +5,6 @@ const Button = () => {
   return (
     <StyledWrapper>
       <button>
-        {" "}
         <span>
           Contact <i className="fa-solid fa-arrow-right"></i>
         </span>
@@ -40,10 +39,10 @@ const StyledWrapper = styled.div`
     transition: color 0.4s;
   }
 
-    button span i {
+  button span i {
     margin-top: 4px;
     font-size: 14px;
-}
+  }
 
   button:hover span {
     color: black;
@@ -71,6 +70,9 @@ const StyledWrapper = styled.div`
 
   button:hover::before {
     transform: translate3d(100%, 0, 0);
+  }
+  @media only screen and (max-width: 650px) {
+    display: none;
   }
 `;
 
