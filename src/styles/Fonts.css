@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Graphik-Thin100';
+  font-weight: 100;
+  src: url('../assets/fonts/Graphik-Thin.ttf');
+}
+
+@font-face {
+  font-family: 'Graphik-ExtraLight200';
+  font-weight: 200;
+  src: url('../assets/fonts/Graphik-ExtraLight.ttf');
+}
+
+@font-face {
+  font-family: 'Graphik-Light300';
+  font-weight: 300;
+  src: url('../assets/fonts/Graphik-Light-Trial.otf');
+}
+
+@font-face {
+  font-family: 'Graphik-Regular400';
+  font-weight: 400;
+  src: url('../assets/fonts/Graphik-Regular-Trial.otf');
+}
+
+@font-face {
+  font-family: 'Graphik-Medium500';
+  font-weight: 500;
+  src: url('../assets/fonts/Graphik-Medium-Trial.otf');
+}
+
+@font-face {
+  font-family: 'Graphik-SemiBold600';
+  font-weight: 600;
+  src: url('../assets/fonts/Graphik-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Graphik-Bold700';
+  font-weight: 700;
+  src: url('../assets/fonts/Graphik-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Graphik-ExtraBold800';
+  font-weight: 800;
+  src: url('../assets/fonts/Graphik-ExtraBold.ttf');
+}
+
+@font-face {
+  font-family: 'Graphik-Black900';
+  font-weight: 900;
+  src: url('../assets/fonts/Graphik-Black.ttf');
+}
