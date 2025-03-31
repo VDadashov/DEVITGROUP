@@ -16,6 +16,10 @@ const StyledMasteryArea = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 800px) {
+    margin: 64px 0;
+  }
 `;
 
 const StyledMasteryAreaTitle = styled.div`
@@ -34,6 +38,23 @@ const StyledMasteryAreaTitle = styled.div`
     @media (max-width: 950px) {
       font-size: 32px;
     }
+
+    @media (max-width: 800px) {
+      width: 48%;
+    }
+
+    @media (max-width: 700px) {
+      width: 50%;
+    }
+
+    @media (max-width: 600px) {
+      width: 54%;
+      font-size: 30px;
+    }
+
+    @media (max-width: 500px) {
+      width: 70%;
+    }
   }
 
   p {
@@ -49,6 +70,25 @@ const StyledMasteryAreaTitle = styled.div`
       font-size: 15px;
       margin-bottom: 20px;
     }
+
+    @media (max-width: 850px) {
+      font-size: 15px;
+      margin-bottom: 0px;
+    }
+
+    @media (max-width: 800px) {
+      width: 50%;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 14px;
+      margin-right: 30px;
+    }
+
+    @media (max-width: 500px) {
+      width: 75%;
+      margin-right: 10px;
+    }
   }
 `;
 
@@ -56,6 +96,18 @@ const StyledMasteryAreaContent = styled.div`
   position: relative;
   width: 100%;
   height: 680px;
+
+  @media (max-width: 800px) {
+    height: 560px;
+  }
+
+  @media (max-width: 800px) {
+    height: 520px;
+  }
+
+  @media (max-width: 600px) {
+    height: 460px;
+  }
 `;
 
 const StyledFirstCycle = styled.div`
@@ -67,6 +119,31 @@ const StyledFirstCycle = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (max-width: 1000px) {
+    width: 600px;
+    height: 600px;
+  }
+
+  @media (max-width: 850px) {
+    width: 540px;
+    height: 540px;
+  }
+
+  @media (max-width: 800px) {
+    width: 470px;
+    height: 470px;
+  }
+
+  @media (max-width: 700px) {
+    width: 420px;
+    height: 420px;
+  }
+
+  @media (max-width: 600px) {
+    width: 380px;
+    height: 380px;
+  }
 `;
 
 const StyledSecondCycle = styled.div`
@@ -78,6 +155,26 @@ const StyledSecondCycle = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (max-width: 1000px) {
+    width: 350px;
+    height: 350px;
+  }
+
+  @media (max-width: 850px) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media (max-width: 800px) {
+    width: 250px;
+    height: 250px;
+  }
+
+  @media (max-width: 700px) {
+    width: 200px;
+    height: 200px;
+  }
 `;
 const StyledMasteryAreaInterSection = styled.span`
   color: #262626;
@@ -95,6 +192,11 @@ const StyledMasteryAreaInterSection = styled.span`
   z-index: 1;
   top: 40px;
   transition: all 1s cubic-bezier(0.89, 0.34, 0.2, 0.83);
+
+  @media (max-width: 850px) {
+    top: 5%;
+    font-size: 18px;
+  }
 `;
 
 const StyledTextLine = styled.div`
@@ -107,6 +209,14 @@ const StyledTextLine = styled.div`
 
   @media (max-width: 1300px) {
     width: 78%;
+  }
+
+  @media (max-width: 700px) {
+    width: 85%;
+  }
+
+  @media (max-width: 500px) {
+    width: 95%;
   }
 
   &::before,
@@ -139,8 +249,51 @@ const StyledTextLineTitle = styled.span`
   font-size: 20px;
 
   @media (max-width: 1300px) {
-    left: ${({$left1300}) => $left1300 ? $left1300 + "!important" : 0};
-    right: ${({$right1300}) => $right1300 ? $right1300 + "!important" : 0};
+    left: ${({ $left }) => ($left ? "-7.5% !important" : "none")};
+    right: ${({ $right }) => ($right ? "-9.6% !important" : "none")};
+  }
+
+  @media (max-width: 1200px) {
+    left: ${({ $left }) => ($left ? "-8.2% !important" : "none")};
+    right: ${({ $right }) => ($right ? "-10.3% !important" : "none")};
+    font-size: 19px;
+  }
+
+  @media (max-width: 1000px) {
+    left: ${({ $left }) => ($left ? "-8.8% !important" : "none")};
+    right: ${({ $right }) => ($right ? "-10.9% !important" : "none")};
+    font-size: 18px;
+  }
+
+  @media (max-width: 900px) {
+    left: ${({ $left }) => ($left ? "-9.3% !important" : "none")};
+    right: ${({ $right }) => ($right ? "-11.8% !important" : "none")};
+    font-size: 17px;
+  }
+
+  @media (max-width: 830px) {
+    left: ${({ $left }) => ($left ? "-9.8% !important" : "none")};
+    right: ${({ $right }) => ($right ? "-12.3% !important" : "none")};
+  }
+
+  @media (max-width: 800px) {
+    left: ${({ $left }) => ($left ? "-10.3% !important" : "none")};
+    right: ${({ $right }) => ($right ? "-12.7% !important" : "none")};
+    font-size: 16px;
+  }
+
+  @media (max-width: 720px) {
+    left: ${({ $left }) => ($left ? "-11% !important" : "none")};
+    right: ${({ $right }) => ($right ? "-13.7% !important" : "none")};
+  }
+
+  @media (max-width: 670px) {
+    left: ${({ $left }) => ($left ? "-11.6% !important" : "none")};
+    right: ${({ $right }) => ($right ? "-14.4% !important" : "none")};
+  }
+
+  @media (max-width: 650px) {
+    display: none;
   }
 `;
 
@@ -153,13 +306,105 @@ const StyledMasteryAreaItem = styled.a`
   padding: ${({ $isDefault }) =>
     $isDefault ? "3px 13px 5.4px 13px" : "3px 13px 5.4px 33px"};
   position: absolute;
-  top: ${({$top}) => $top};
-  right: ${({$right}) => $right};
-  left: ${({$left}) => $left};
+  top: ${({ $top }) => $top};
+  right: ${({ $right }) => $right};
+  left: ${({ $left }) => $left};
   overflow: hidden;
   display: inline-block;
   transition: all 0.7s ease;
   z-index: 1;
+
+  @media (max-width: 850px) {
+    display: ${({ $isDefault }) => ($isDefault ? "none" : "inline-block")};
+  }
+
+  @media (max-width: 1100px) {
+    &.icon1 {
+      right: 41%;
+      top: 27%;
+    }
+
+    &.icon7 {
+      left: 51%;
+    }
+
+    &.icon3 {
+      left: 51%;
+    }
+
+    &.icon11 {
+      left: 18%;
+    }
+
+    &.icon12 {
+      top: 62%;
+      right: 14%;
+    }
+
+    &.icon3 {
+      left: 60%;
+    }
+    &.icon4 {
+      left: 25%;
+    }
+  }
+
+  @media (max-width: 850px) {
+    &.icon2 {
+      left: 27%;
+    }
+
+    &.icon1 {
+      right: 38%;
+      top: 30%;
+    }
+
+    &.icon7 {
+      left: 57%;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &.icon2 {
+      left: 27%;
+      top: 43%;
+    }
+
+    &.icon1 {
+      right: 34%;
+      top: 32%;
+    }
+
+    &.icon7 {
+      left: 53%;
+      top: 43%;
+    }
+  }
+
+  @media (max-width: 550px) {
+    &.icon2 {
+      left: 16%;
+      top: 40%;
+    }
+
+    &.icon1 {
+      right: 27%;
+      top: 28%;
+    }
+
+    &.icon7 {
+      left: 53%;
+      top: 40%;
+    }
+
+    &.icon4 {
+      left: 15%;
+    }
+
+    &.icon6 {
+      left: 33%;
+    }
+  }
 
   span.dftitle {
     font-family: "Graphik-Regular400";
@@ -170,6 +415,22 @@ const StyledMasteryAreaItem = styled.a`
     overflow: hidden;
     color: #cccccc;
     font-weight: bold;
+
+    @media (max-width: 1300px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 1300px) {
+      font-size: 17px;
+    }
+
+    @media (max-width: 1000px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 950px) {
+      font-size: 15px;
+    }
   }
 
   .icon,
@@ -188,6 +449,15 @@ const StyledMasteryAreaItem = styled.a`
     left: 12px;
     transform: translateY(-50%);
     transition: transform 0.7s ease;
+
+    @media (max-width: 600px) {
+      top: 44%;
+
+      & img {
+        width: 12px;
+        height: 12px;
+      }
+    }
   }
 
   span.arrow {
@@ -207,6 +477,26 @@ const StyledMasteryAreaItem = styled.a`
     position: relative;
     overflow: hidden;
     color: #fff;
+
+    @media (max-width: 1300px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 1300px) {
+      font-size: 17px;
+    }
+
+    @media (max-width: 1000px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 950px) {
+      font-size: 15px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 14px;
+    }
   }
 
   strong::after {
@@ -267,6 +557,7 @@ const MasteryArea = () => {
             $hoverColor="#fcfeac"
             $right="42.5%"
             $top="27%"
+            className="icon1"
           >
             <span className="icon">
               <StyledImage
@@ -288,6 +579,7 @@ const MasteryArea = () => {
             $hoverColor="#94D8FE"
             $left="35%"
             $top="40%"
+            className="icon2"
           >
             <span className="icon">
               <StyledImage
@@ -309,6 +601,7 @@ const MasteryArea = () => {
             $hoverColor="#D3FE"
             $left="55%"
             $top="40%"
+            className="icon7"
           >
             <span className="icon">
               <StyledImage
@@ -330,6 +623,7 @@ const MasteryArea = () => {
             $hoverColor="#FEA1B2"
             $left="55%"
             $top="55%"
+            className="icon3"
           >
             <span className="icon">
               <StyledImage
@@ -351,6 +645,7 @@ const MasteryArea = () => {
             $hoverColor="#F3B0FE"
             $left="32%"
             $top="55%"
+            className="icon4"
           >
             <span className="icon">
               <StyledImage
@@ -372,6 +667,7 @@ const MasteryArea = () => {
             $hoverColor="#85FED3"
             $left="43%"
             $top="67%"
+            className="icon6"
           >
             <span className="icon">
               <StyledImage
@@ -393,7 +689,7 @@ const MasteryArea = () => {
           <StyledMasteryAreaItem $isDefault={true} $right="18%" $top="55%">
             <span className="dftitle">gtm strategy</span>
           </StyledMasteryAreaItem>
-          <StyledMasteryAreaItem $isDefault={true} $right="10%" $top="55%">
+          <StyledMasteryAreaItem $isDefault={true} $right="10%" $top="55%" className="icon12">
             <span className="dftitle">smm</span>
           </StyledMasteryAreaItem>
           <StyledMasteryAreaItem $isDefault={true} $right="22%" $top="67%">
@@ -402,7 +698,7 @@ const MasteryArea = () => {
           <StyledMasteryAreaItem $isDefault={true} $right="11%" $top="40%">
             <span className="dftitle">production planning</span>
           </StyledMasteryAreaItem>
-          <StyledMasteryAreaItem $isDefault={true} $left="22%" $top="27%">
+          <StyledMasteryAreaItem $isDefault={true} $left="22%" $top="27%" className="icon11">
             <span className="dftitle">printing services</span>
           </StyledMasteryAreaItem>
           <StyledMasteryAreaItem $isDefault={true} $left="15%" $top="40%">
@@ -415,10 +711,10 @@ const MasteryArea = () => {
             <span className="dftitle">video production</span>
           </StyledMasteryAreaItem>
           <StyledTextLine>
-            <StyledTextLineTitle $left1300="-7.5%" style={{ left: "-6.3%" }}>
+            <StyledTextLineTitle $left={true} style={{ left: "-6.3%" }}>
               Brand
             </StyledTextLineTitle>
-            <StyledTextLineTitle $right1300="-9.8%" style={{ right: "-8.1%" }}>
+            <StyledTextLineTitle $right={true} style={{ right: "-8.1%" }}>
               Product
             </StyledTextLineTitle>
           </StyledTextLine>

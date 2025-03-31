@@ -24,6 +24,25 @@ const StyledBrandTitle = styled.h1`
   @media (max-width: 800px) {
     font-size: 64px;
   }
+
+  @media (max-width: 700px) {
+    font-size: 60px;
+    width: 75%;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 52px;
+    font-family: "Graphik-Regular400";
+  }
+
+  @media (max-width: 520px) {
+    font-size: 44px;
+  }
+
+  @media (max-width: 440px) {
+    font-size: 42px;
+    width: 85%;
+  }
 `;
 
 const StyledBrandDescription = styled.p`
@@ -33,6 +52,16 @@ const StyledBrandDescription = styled.p`
   max-width: 980px;
   width: 60%;
   font-family: "Graphik-Regular400";
+
+  @media (max-width: 600px) {
+    font-size: 17px;
+    width: 70%;
+  }
+
+  @media (max-width: 520px) {
+    font-size: 16px;
+    width: 75%;
+  }
 `;
 
 const BrandSection = () => {
