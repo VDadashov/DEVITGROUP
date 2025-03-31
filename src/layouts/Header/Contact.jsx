@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const Button = () => {
+  const navigate = useNavigate();
+
   return (
-    <StyledWrapper>
+    <StyledWrapper onClick={() => navigate("/contact")}>
       <button>
         <span>
           Contact <i className="fa-solid fa-arrow-right"></i>
@@ -18,7 +21,7 @@ const StyledWrapper = styled.div`
     outline: none;
     cursor: pointer;
     border: 1px solid #000;
-    padding: 6.8px 23px;
+    padding: 7.2px 23px;
     margin: 0;
     font-family: "Graphik-Light300";
     font-size: inherit;
@@ -41,7 +44,7 @@ const StyledWrapper = styled.div`
 
   button span i {
     margin-top: 4px;
-    font-size: 14px;
+    font-size: 13px;
   }
 
   button:hover span {

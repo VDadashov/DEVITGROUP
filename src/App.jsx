@@ -8,9 +8,8 @@ function App() {
 
   return (
     <>
-      <Container>
+      
         <RouterProvider router={router} />
-      </Container>
     </>
   );
 }

@@ -4,6 +4,8 @@ import Navbar from "./navbar";
 import styled from "styled-components";
 import Button from "./contact";
 import Menu from "./Menu";
+import { Container } from "../../styles/common/container";
+import SubscribeButton from "./Subscribe";
 
 const StyledHeader = styled.header`
   display: flex;
@@ -12,14 +14,25 @@ const StyledHeader = styled.header`
   padding: 1rem;
 `;
 
+const StyledList = styled.div`
+  display:flex;
+  gap:20px;
+  align-items:center;
+`
+
 const Header = () => {
   return (
-    <StyledHeader>
-      <Logo />
-      <Navbar />
-      <Button />
-      <Menu />
-    </StyledHeader>
+    <Container>
+      <StyledHeader>
+        <Logo />
+        <Navbar />
+        <StyledList>
+          <SubscribeButton />
+          <Button />
+        </StyledList>
+        <Menu />
+      </StyledHeader>
+    </Container>
   );
 };
 

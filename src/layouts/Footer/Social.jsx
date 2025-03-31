@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { fontSize } from "./../../styles/Breakpoints";
-import theme from "./../../styles/Theme";
 
 const Social = () => {
   return (
@@ -80,7 +78,8 @@ const StyledUpper = styled.div`
   gap: 1.5rem;
   justify-content: space-between;
   flex-wrap: wrap;
-  ul {
+  font-family: "Graphik-Light300";
+   ul {
     padding-top: 50px;
     list-style: none;
     display: flex;

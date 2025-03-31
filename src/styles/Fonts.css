@@ -51,3 +51,9 @@
   font-weight: 900;
   src: url('../assets/fonts/Graphik-Black.ttf');
 }
+
+@font-face {
+  font-family: 'Poppins-Regular400';
+  font-weight: 900;
+  src: url('../assets/fonts/Poppins/Poppins-Regular.ttf');
+}

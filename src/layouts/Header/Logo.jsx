@@ -1,13 +1,23 @@
 import React from 'react'
 import logo from "@assets/images/logo.png"
 import StyledImage from '../../styles/common/Image'
+import { Link } from 'react-router-dom'
+
 
 const Logo = () => {
   return (
     <>
-      <StyledImage src={logo} alt="logo" $width="80px" $height="80px" $position="cover" />
+      <Link to={"/"}>
+        <StyledImage
+          src={logo}
+          alt="logo"
+          $width="60px"
+          $height="55px"
+          $position="cover"
+        />
+      </Link>
     </>
-  )
+  );
 }
 
 export default Logo

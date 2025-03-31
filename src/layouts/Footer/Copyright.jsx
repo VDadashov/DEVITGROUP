@@ -34,6 +34,8 @@ const StyledCopyright = styled.div`
     list-style: none;
     flex-wrap: wrap;
     text-align: start;
+    font-family: "Graphik-Light300";
+    margin-bottom: 20px;
     li {
       font-size: ${({ theme }) => theme.fontSize.md};
       a {
