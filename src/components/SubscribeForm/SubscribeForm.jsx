@@ -61,9 +61,6 @@ const StyledWrapper = styled.div`
   button:hover::before {
     transform: translate3d(100%, 0, 0);
   }
-  @media only screen and (max-width: 650px) {
-    display: none;
-  }
 `;
 
 const SubscribeForm = () => {

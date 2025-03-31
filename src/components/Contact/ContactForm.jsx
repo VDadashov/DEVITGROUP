@@ -6,44 +6,40 @@ const ContactForm = () => {
     <StyledFormSection>
       <StyledFormContent>
         <div>
-          <h3>Bizimlə Əlaqə</h3>
+          <h3>Contact Us</h3>
         </div>
         <div>
           <p>
-            "Sualınız və ya təklifiniz var? Bizimlə əlaqə saxlayın – sizdən
-            eşitməkdən məmnun olarıq! Yardıma ehtiyacınız olduqda bizə müraciət
-            edin."
+            "Do you have a question or suggestion? Contact us – we would be
+            happy to hear from you! Reach out to us whenever you need
+            assistance."
           </p>
         </div>
       </StyledFormContent>
       <StyledForm action="submit">
         <div class="form__info">
           <div class="form__info__name">
-            <label htmlFor="fullname">Tam ad</label>
+            <label htmlFor="fullname">Full Name</label>
             <input
               name="fullname"
               type="text"
-              placeholder="Adınızı daxil edin"
+              placeholder="Enter your full name"
             />
           </div>
           <div class="form__info__email">
             <label htmlFor="email">Email</label>
-            <input
-              name="email"
-              type="email"
-              placeholder="E-mail ünvanınızı daxil edin"
-            />
+            <input name="email" type="email" placeholder="E-mail address" />
           </div>
         </div>
         <div class="form__subject">
-          <label htmlFor="subject">Mövzu</label>
+          <label htmlFor="subject">Subject</label>
           <textarea
             name="subject"
             id="subject"
-            placeholder="Mesajınızı yazın"
+            placeholder="Write your message"
           ></textarea>
         </div>
-        <button type="submit">Göndər</button>
+        <button type="submit">Send</button>
       </StyledForm>
     </StyledFormSection>
   );
@@ -648,5 +644,9 @@ const StyledForm = styled.div`
     }
   }
 `;
-const StyledFormSection = styled.form``;
+const StyledFormSection = styled.form`
+display: flex;
+flex-direction: column;
+gap: 20px;
+`;
 export default ContactForm;

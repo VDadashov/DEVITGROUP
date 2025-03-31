@@ -33,10 +33,9 @@ const CardContainer = styled.div`
   }
 `;
 
-
 const CardImage = styled.img`
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: contain;
 `;
 
@@ -65,8 +64,7 @@ const CardDescription = styled.p`
   color: rgb(70, 68, 68);
   opacity: 0;
   transition: opacity 0.3s ease;
-  font-family: "Graphik-Regular400";
-
+  font-family: "Graphik-Regular400"; 
   display: -webkit-box;
   -webkit-line-clamp: 3; /* Maksimum 3 sətir */
   -webkit-box-orient: vertical;

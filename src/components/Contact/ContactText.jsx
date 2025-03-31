@@ -4,12 +4,12 @@ import styled from "styled-components";
 const ContactText = () => {
   return (
     <StyledText>
-      <div class="contact__text__name">Əlaqə</div>
+      <div class="contact__text__name">Contact</div>
       <div class="contact__text__head">
-        Biz sizinlə əlaqə yaratmaqdan məmnun olarıq!
+        We would be happy to get in touch with you!
       </div>
       <div class="contact__text__subject">
-        Dost canlı komandamız hər zaman suallarınızı cavablandırmağa hazırdır.
+        Our friendly team is always ready to answer your questions.
       </div>
     </StyledText>
   );

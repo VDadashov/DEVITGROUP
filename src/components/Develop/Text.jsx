@@ -6,20 +6,20 @@ const Text = () => {
   return (
     <StyledSection>
       <StyledText>
-        <span className="develop">İnkişaf</span>
-        <h1>Mükəmməl IT həlləri biznesinizin artımını sürətləndirir</h1>
+        <span className="develop">Develop</span>
+        <h1>Perfect IT solutions accelerate the growth of your business.</h1>
         <span className="description">
-          Biznesiniz üçün ən müasir və inteqrasiya olunmuş IT həlləri təqdim
-          edirik, işinizi daha effektiv və məhsuldar etmək üçün buradayıq.
+          We offer the most modern and integrated IT solutions for your
+          business; we are here to make your work more efficient and productive.
         </span>
       </StyledText>
       <StyledButton>
         <button className="moreBtn">
-          <span>Daha çox öyrən</span>
+          <span>Learn More</span>
         </button>
         <button className="linkBtn">
           <span>
-            Əlaqə qurun
+            Contact Us
             <span>
               <i class="fa-solid fa-arrow-up-long"></i>
             </span>
@@ -46,7 +46,7 @@ const StyledText = styled.div`
   display: flex;
   flex-direction: column;
   .develop {
-    font-size: ${({ theme }) => theme.fontSize.sm};
+    font-size: 20px;
     color: #f0b90b;
     font-family: "Poppins-Regular400";
   }
@@ -59,7 +59,6 @@ const StyledText = styled.div`
     font-size: ${({ theme }) => theme.fontSize.custom1};
     font-family: "Poppins-Regular400";
   }
-
     @media only screen and (max-width: 1400px) {
     .h1 {
       font-size: 48px !important;

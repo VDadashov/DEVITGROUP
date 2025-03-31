@@ -12,8 +12,8 @@ const AboutUs = () => {
             <h3>Customer highlights</h3>
           </div>
           <div className="about__grid__foot">
-            See how organizations of all sizes in all industries rely on Oracle
-            to help them succeed.
+            As DevIT Group, we support businesses from various industries with
+            innovative technologies, accelerating their digital transformation.
           </div>
         </StyledAboutGridComponent>
         <StyledAboutGridComponent>
@@ -22,8 +22,9 @@ const AboutUs = () => {
             <h3>Connections</h3>
           </div>
           <div className="about__grid__foot">
-            Access earnings results, SEC filings, presentations, and other
-            financial information.
+            As DevIT Group, we come together around innovative ideas and
+            technologies, strengthening collaborations and growing together.
+            Let's create new opportunities together!
           </div>
         </StyledAboutGridComponent>
         <StyledAboutGridComponent>
@@ -32,7 +33,8 @@ const AboutUs = () => {
             <h3>Team</h3>
           </div>
           <div className="about__grid__foot">
-            Learn about our executive team and board of directors.
+            As DevIT Group, with our team of professional and innovative
+            experts, we provide high-quality IT solutions to our clients.
           </div>
         </StyledAboutGridComponent>
         <StyledAboutGridComponent>
@@ -41,7 +43,9 @@ const AboutUs = () => {
             <h3>Support</h3>
           </div>
           <div className="about__grid__foot">
-            Catch up on the latest company news and updates.
+            As DevIT Group, we are always by your side for any questions or
+            technical issues. Our professional support team is ready to provide
+            fast and effective solutions.
           </div>
         </StyledAboutGridComponent>
         <StyledAboutGridComponent>
@@ -50,8 +54,9 @@ const AboutUs = () => {
             <h3>Corporate responsibility</h3>
           </div>
           <div className="about__grid__foot">
-            Read about our efforts in education, philanthropy, volunteering,
-            sustainability, and more.
+            Building a more sustainable and tech-driven future is our priority.
+            At the same time, we’re committed to delivering every project on
+            time—with precision and quality
           </div>
         </StyledAboutGridComponent>
         <StyledAboutGridComponent>
@@ -60,8 +65,9 @@ const AboutUs = () => {
             <h3>Careers</h3>
           </div>
           <div className="about__grid__foot">
-            Create the future with us. Join the team that’s innovating solutions
-            to global challenges.
+            At DevIT Group, we work alongside innovative and talented
+            individuals to create groundbreaking projects. Professional growth,
+            a creative environment, and a dynamic team are waiting for you!
           </div>
         </StyledAboutGridComponent>
       </StyledAboutGrid>
@@ -73,6 +79,9 @@ const StyledAboutSection = styled.div`
   flex-direction: column;
   gap: 40px;
   font-family: "Graphik-Light300";
+  @media (max-width: 1100px) {
+  text-align: center;
+  }
 `;
 const StyledAboutGrid = styled.div`
   display: flex;

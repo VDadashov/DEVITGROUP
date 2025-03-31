@@ -17,5 +17,10 @@ const About = () => {
 
 const StyledAbout = styled.div`
   margin: 80px 0;
+  @media (max-width:1100px) {
+   display: flex;
+   flex-direction: column;
+    gap: 90px;
+  }
 `;
 export default About;

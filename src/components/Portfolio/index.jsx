@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { Container } from '../../styles/common/container'
-import styled from 'styled-components'
-import SelectDropdown from '../SelectDropdown';
-import Card from '../Card';
+import React, { useState } from "react";
+import { Container } from "../../styles/common/container";
+import styled from "styled-components";
+import SelectDropdown from "../SelectDropdown";
+import Card from "../Card";
 import azfreshdagitimImg from "@assets/images/Rahat-blade.jpg";
 import bakuMasuraImg from "@assets/images/bakuMasura.webp";
 import sufleImg from "@assets/images/sufleImg.png";
@@ -27,9 +27,9 @@ import boncukImg from "@assets/images/boncukImg.svg";
 const StyledPortfolioContainer = styled.div`
   width: 100%;
   margin-top: 64px;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
 `;
 
 const StyledPortfolioTitle = styled.div`
@@ -39,7 +39,7 @@ const StyledPortfolioTitle = styled.div`
   justify-content: center;
 
   h1 {
-    font-size: 92px;
+    font-size: 4.5rem;
     font-weight: 600;
     letter-spacing: -0.2rem;
     line-height: 1.1;
@@ -63,8 +63,8 @@ const StyledPortfolioTitle = styled.div`
 `;
 
 const StyledPortfolioSelectOption = styled.div`
-    margin-bottom: 32px;
-`
+  margin-bottom: 32px;
+`;
 
 const industries = [
   "Web Design",
@@ -307,7 +307,8 @@ const PortfolioContainer = () => {
             width: "100%",
             display: "flex",
             flexWrap: "wrap",
-            justifyContent: "center",
+            justifyContent: "space-between",
+            textAlign: "center",
           }}
         >
           {filteredProjects.map((project) => (
@@ -325,4 +326,4 @@ const PortfolioContainer = () => {
   );
 };
 
-export default PortfolioContainer
+export default PortfolioContainer;

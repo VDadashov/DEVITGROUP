@@ -9,12 +9,12 @@ const ContactPhone = () => {
           <i class="fa-solid fa-phone"></i>
         </div>
         <div class="number__text">
-          <div class="number__text__head">Zəng edin</div>
+          <div class="number__text__head">Call Us</div>
           <div class="number__text__time">
-            Bazar ertəsi - Cümə: 09:00 - 21:00
+            Monday - Friday: 09:00 - 18:00
           </div>
           <div class="number__text__number">
-            <a href="#">+994 55 548 28 66</a>
+            <a href="#">+994 51 345 26 86</a>
           </div>
         </div>
       </div>
@@ -23,8 +23,8 @@ const ContactPhone = () => {
           <i class="fa-regular fa-comment"></i>
         </div>
         <div class="support__text">
-          <div class="support__text__head">Dəstək üçün yazın</div>
-          <div class="support__text__subject">Yardım üçün buradayıq.</div>
+          <div class="support__text__head">Write to us for support.</div>
+          <div class="support__text__subject">We are here for help.</div>
           <div class="support__text__number">
             <a href="#">devservice@gmail.com</a>
           </div>

@@ -6,10 +6,7 @@ const Copyright = () => {
     <StyledCopyright>
       <ul>
         <li className="right__line">
-          <span>© 2025 Ramotion Inc. All rights reserved</span>
-        </li>
-        <li className="right__line">
-          <a href="#">info@ramotion.com</a>
+          <span>© 2025 DevIT Group. All rights reserved</span>
         </li>
         <li className="right__line">
           <a href="#">Sitemap</a>
@@ -30,10 +27,11 @@ const Copyright = () => {
 const StyledCopyright = styled.div`
   ul {
     display: flex;
-    gap: 2rem;
     list-style: none;
     flex-wrap: wrap;
-    text-align: start;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     font-family: "Graphik-Light300";
     margin-bottom: 20px;
     li {

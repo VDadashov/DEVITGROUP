@@ -11,10 +11,10 @@ const DropdownWrapper = styled.div`
 const DropdownButton = styled.button`
   background-color: #2563eb;
   color: #fff;
-  padding: 10px 16px;
+  padding: 10px 20px;
   border: none;
   border-radius: 999px;
-  font-size: 0.9rem;
+  font-size: 20px;
   font-weight: 500;
   cursor: pointer;
   display: flex;

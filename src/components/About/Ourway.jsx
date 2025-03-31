@@ -4,18 +4,24 @@ import StyledImage from "../../styles/common/Image";
 import img1 from "@assets/images/1.png";
 import img2 from "@assets/images/2.png";
 import img3 from "@assets/images/3.png";
+import { fontSize } from "../../styles/Breakpoints";
 const Ourway = () => {
   return (
     <StyledWhoWeAre>
       <h1>Who We Are</h1>
       <StyledOurway>
-        <StyledImage src={img2} $width="35%" $height="auto" $position="cover" />
+        <StyledImage src={img2} $width="32%" $height="auto" $position="cover" />
         <div>
           <h3>Our Mission: Helping Millions of Organizations Grow Better</h3>
           <span>
-            We believe not just in growing bigger, but in growing better. And
-            growing better means aligning the success of your own business with
-            the success of your customers. Win-win!
+            DevIT Group accelerates the digital growth of businesses with modern
+            IT solutions and empowers them with innovative technologies. Our
+            professional team offers a wide range of services, including website
+            development, mobile application development, system and network
+            solutions, as well as artificial intelligence technologies. We
+            provide effective and sustainable solutions tailored to our clients'
+            needs, making their digital transformation process smoother and more
+            efficient.
           </span>
         </div>
       </StyledOurway>
@@ -23,22 +29,23 @@ const Ourway = () => {
         <div>
           <h3>Our Story</h3>
           <span>
-            In 2004, fellow MIT graduate students Brian Halligan and Dharmesh
-            Shah noticed a major shift in the way people shop and purchase
-            products. Buyers didn’t want to be interrupted by ads, they wanted
-            helpful information. In 2006, they founded HubSpot to help companies
-            use that shift to grow better with inbound marketing. Along the way,
-            HubSpot expanded beyond marketing into a crafted, not cobbled suite
-            of products that create the frictionless customer experience that
-            buyers expect today. Expertly led by CEO Yamini Rangan, HubSpot uses
-            its customer platform built on an AI-powered Smart CRM to help
-            millions of scaling organizations grow better.
+            Founded with a passion for innovation and technology, DevIT Group
+            has quickly become a trusted brand in the IT industry. The company
+            successfully operates in the fields of website development, mobile
+            applications, system and network solutions, as well as artificial
+            intelligence technologies. Over time, DevIT Group has delivered
+            numerous successful projects while maintaining customer satisfaction
+            as its top priority. Looking toward the future, DevIT Group aims to
+            become one of the leading global technology companies by
+            prioritizing innovation and quality.
+            <br />
+            <b>DevIT Group – Your trusted partner for digital success!</b>
           </span>
         </div>
         <StyledImage
           src={img3}
           alt="ourway"
-          $width="40%"
+          $width="35%"
           $height="auto"
           $position="cover"
         />
@@ -49,12 +56,15 @@ const Ourway = () => {
 const StyledWhoWeAre = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 80px;
   font-family: "Graphik-Light300";
+  @media only screen and (max-width: 1100px) {
+    text-align: center;
+  }
 `;
 const StyledOurway = styled.div`
   display: flex;
-  gap: 50px;
+  gap: 100px;
   font-family: "Graphik-Light300";
 
   h3 {
@@ -73,20 +83,20 @@ const StyledOurway = styled.div`
   @media only screen and (max-width: 1100px) {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 0px;
     justify-content: center;
     align-items: center;
     img {
-      width: 70%;
+      width: 30%;
     }
     div {
-      width: 90%;
+      width: 65%;
     }
   }
 `;
 const StyledOurStory = styled.div`
   display: flex;
-  gap: 50px;
+  gap: 100px;
   font-family: "Graphik-Light300";
 
   h3 {
@@ -100,19 +110,24 @@ const StyledOurStory = styled.div`
     gap: 30px;
     font-family: "Graphik-Light300";
   }
+  span {
+    b {
+      font-size: 18px;
+    }
+  }
   @media only screen and (max-width: 1100px) {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 0px;
     justify-content: center;
     align-items: center;
     img {
       order: 1;
-      width: 90%;
+      width: 40%;
     }
     div {
       order: 2;
-      width: 90%;
+      width: 65%;
     }
   }
 `;
