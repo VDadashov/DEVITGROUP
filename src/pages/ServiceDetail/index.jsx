@@ -1,8 +1,32 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { FaSortDown } from "react-icons/fa";
 import atomIcon from "@assets/images/atom.png";
 import { useParams } from "react-router-dom";
+import { useInView } from "../../utils/hooks/useInView";
+
+
+const fadeSlideIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const Wrapper = styled.section`
   margin: 120px 0;
@@ -57,6 +81,8 @@ const Item = styled.div`
   width: 100%;
   height: ${({ active }) => (active ? "auto" : "93.6px")};
   transition: all 0.3s ease;
+  opacity: ${({ visible }) => (visible ? 1 : 0)};
+  animation: ${({ visible }) => (visible ? fadeIn : "none")} 0.8s ease forwards;
 `;
 
 const WrapperLine = styled.div`
@@ -94,18 +120,9 @@ const Description = styled.div`
   font-size: 18px;
   font-family: "Graphik-Regular400";
   display: ${({ active }) => (active ? "block" : "none")};
+  animation: ${({ active }) => (active ? fadeSlideIn : "none")} 0.3s ease
+    forwards;
 `;
-
-const items = [
-  "Consulting and Project Planning",
-  "Design and Prototyping",
-  "Code",
-  "Content Management",
-  "Testing",
-  "Training on Website Update",
-  "Allocation to Server",
-  "Support",
-];
 
 const Branding = [
   {
@@ -315,8 +332,6 @@ const dataMap = {
   crm: Crm,
 };
 
-const detailText = `We start by understanding your goals and needs. We discuss your project's scope, target audience and desired features. This helps us create a detailed plan for the project, outlining tasks, timelines, and resources.`;
-
 const ServiceDetail = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -341,24 +356,30 @@ const ServiceDetail = () => {
         <Content>
           <h3>Brief information</h3>
           <Info>
-            {content.map((item, index) => (
-              <Item
-                key={index}
-                active={activeIndex === index}
-                onClick={() => toggleAccordion(index)}
-              >
-                <WrapperLine>
-                  <Number>{`0${index + 1}`}</Number>
-                  <Name>{item.title}</Name>
-                  <DropdownIcon active={activeIndex === index}>
-                    <FaSortDown />
-                  </DropdownIcon>
-                </WrapperLine>
-                <Description active={activeIndex === index}>
-                  {item.description}
-                </Description>
-              </Item>
-            ))}
+            {content.map((item, index) => {
+              const [ref, isInView] = useInView({ threshold: 0.1 });
+
+              return (
+                <Item
+                  key={index}
+                  ref={ref}
+                  active={activeIndex === index}
+                  visible={isInView}
+                  onClick={() => toggleAccordion(index)}
+                >
+                  <WrapperLine>
+                    <Number>{`0${index + 1}`}</Number>
+                    <Name>{item.title}</Name>
+                    <DropdownIcon active={activeIndex === index}>
+                      <FaSortDown />
+                    </DropdownIcon>
+                  </WrapperLine>
+                  <Description active={activeIndex === index}>
+                    {item.description}
+                  </Description>
+                </Item>
+              );
+            })}
           </Info>
         </Content>
       </Detail>

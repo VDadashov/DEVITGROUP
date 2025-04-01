@@ -59,128 +59,125 @@ const StyledText = styled.div`
     font-size: ${({ theme }) => theme.fontSize.custom1};
     font-family: "Poppins-Regular400";
   }
-    @media only screen and (max-width: 1400px) {
-    .h1 {
-      font-size: 48px !important;
-      line-height: 60px !important;
-  }
-}
 
-@media only screen and (max-width: 1300px) {
-    .h1 {
+  @media (max-width: 1300px) {
+    h1 {
       font-size: 44px !important;
-      line-height: 55px !important;
     }
     .description {
       font-size: 18px !important;
     }
-}
+  }
 
-@media only screen and (max-width: 1200px) {
-    .h1{
+  @media only screen and (max-width: 1200px) {
+    h1 {
       font-size: 42px !important;
-      line-height: 55px !important;
+      line-height: 50px !important;
     }
-}
+  }
 
-@media only screen and (max-width: 1000px) {
-    .h1{
-      font-size: 40px !important;
-      line-height: 55px !important;
+  @media only screen and (max-width: 1100px) {
+    h1 {
+      font-size: 41px !important;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    h1 {
+      font-size: 39px !important;
+      line-height: 46px !important;
     }
     .description {
-      font-size: 17px !important;
+      font-size: 16px !important;
+    }
   }
-}
 
-@media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 900px) {
     .develop {
-      font-size: 12px !important;
+      font-size: 14px !important;
     }
     h1 {
-      font-size: 35px !important;
-      line-height: 48px !important;
+      font-size: 33px !important;
+      line-height: 40px !important;
     }
     .description {
       font-size: 14px !important;
+      padding: 15px 0;
+    }
   }
-}
-  
 
-@media only screen and (max-width: 800px) {
-
-      order: 2;
-      width: 83% !important;
-      text-align: center;
-      h1{
-        margin: 5px 0;
-        font-size: 32px !important;
-        line-height: 42px !important;
-      }
-      .develop{
-        margin: 0 auto;
-      }
+  @media only screen and (max-width: 800px) {
+    order: 2;
+    width: 85% !important;
+    text-align: center;
+    h1 {
+      margin: 5px 0;
+      font-size: 32px !important;
+      line-height: 42px !important;
     }
-}
-
-@media only screen and (max-width: 700px) {
-
-      width: 85% !important;
-      h1{
-        margin: 5px 0;
-        font-size: 28px !important;
-        line-height: 38px !important;
-      }
-      .description{
-        padding-top: 10px !important;
-      }
+    .develop {
+      margin: 0 auto;
+    }
   }
-}
 
-@media only screen and (max-width: 600px) {
-      h1{
-        font-size: 28px !important;
-        line-height: 35px !important;
-      }
-      .description{
-        font-size: 13px !important;
-      }
-}
-
-
-@media only screen and (max-width: 520px) {
-      h1{
-        font-size: 23px !important;
-        line-height: 32px !important;
-        letter-spacing: 1.1px !important;
-      }
-      .description{
-        font-size: 12px !important;
+  @media only screen and (max-width: 700px) {
+    width: 90% !important;
+    h1 {
+      margin: 5px 0;
+      font-size: 29px !important;
+      line-height: 32px !important;
     }
-}
-
-@media only screen and (max-width: 485px) {
-      h1{
-        font-size: 20px !important;
-        line-height: 30px !important;
-        letter-spacing: 1.1px !important;
-      }
-      .description{
-        font-size: 11px !important;
-      }
+    .description {
+      font-size: 13px !important;
+      padding-top: 10px !important;
     }
+  }
 
+  @media only screen and (max-width: 600px) {
+    width: 97% !important;
+    h1 {
+      margin: 5px 0;
+      font-size: 28px !important;
+      line-height: 32px !important;
+    }
+    .description {
+      font-size: 13px !important;
+      font-family: "Graphik-Light300";
+      padding-top: 10px !important;
+    }
+  }
 
-    @media only screen and (max-width: 410px) {
-      h1{
-        font-size: 21px !important;
-        line-height: 30px !important;
-      }
-      .description{
-        padding-top: 5px !important;
-        padding-bottom: 16px !important;
-      }
-}
+  @media only screen and (max-width: 520px) {
+    width: 100% !important;
+    h1 {
+      font-size: 24px !important;
+      line-height: 32px !important;
+      letter-spacing: 1px !important;
+    }
+    .description {
+      font-size: 12px !important;
+    }
+  }
+
+  @media only screen and (max-width: 485px) {
+    h1 {
+      font-size: 23px !important;
+      line-height: 30px !important;
+    }
+    .description {
+      font-size: 11px !important;
+    }
+  }
+
+  @media only screen and (max-width: 440px) {
+    h1 {
+      font-size: 22px !important;
+      line-height: 30px !important;
+    }
+    .description {
+      padding-top: 5px !important;
+      padding-bottom: 16px !important;
+    }
 `;
 const StyledButton = styled.div`
   display: flex;

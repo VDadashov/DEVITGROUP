@@ -62,7 +62,7 @@ const StyledNavbar = styled.nav`
       top: 140%;
       left: 0;
       background-color: #fafafa;
-      padding: 40px 32px;
+      padding: 30px 32px;
       border-radius: 12px;
       border: 1px solid rgba(20, 20, 20, 0.12);
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);

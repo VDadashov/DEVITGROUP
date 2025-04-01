@@ -16,6 +16,11 @@ const StyledVideoContainer = styled.div`
 
   @media only screen and (max-width: 800px) {
     order: 1;
+    width: 80%;
+  }
+
+  @media (max-width: 500px){
+    width: 100%;
   }
 `;
 export default Video;

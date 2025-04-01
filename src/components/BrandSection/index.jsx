@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledBrandSection = styled.div`
-    margin: 80px 0;
+    margin: 180px 0 80px;
     display:flex;
     flex-direction: column;
     align-items:center;
