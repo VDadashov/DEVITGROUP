@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const Menu = () => {
+const Menu = ({ isOpen, setIsOpen }) => {
+
   return (
-    <StyledMenu>
+    <StyledMenu onClick={()=>setIsOpen(true)}>
       <i class="fa-solid fa-bars"></i>
     </StyledMenu>
   );
@@ -19,5 +20,5 @@ const StyledMenu = styled.div`
     display: none;
   }
 `
-;
+  ;
 export default Menu;
