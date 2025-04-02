@@ -335,16 +335,39 @@ const dataMap = {
   crm: Crm,
 };
 
+const AccordionItem = ({ item, index, activeIndex, toggleAccordion }) => {
+  const [ref, isInView] = useInView({ threshold: 0.1 });
+
+  return (
+    <Item
+      ref={ref}
+      active={activeIndex === index}
+      visible={isInView}
+      onClick={() => toggleAccordion(index)}
+    >
+      <WrapperLine>
+        <Number>{`0${index + 1}`}</Number>
+        <Name>{item.title}</Name>
+        <DropdownIcon active={activeIndex === index}>
+          <FaSortDown />
+        </DropdownIcon>
+      </WrapperLine>
+      <Description active={activeIndex === index}>
+        {item.description}
+      </Description>
+    </Item>
+  );
+};
+
 const ServiceDetail = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { type } = useParams();
+  const normalizedType = type?.toLowerCase();
+  const content = dataMap[normalizedType] || [];
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
-  const { type } = useParams();
-  const normalizedType = type?.toLowerCase();
-  const content = dataMap[normalizedType] || [];
 
   return (
     <Wrapper id="service-detail">
@@ -359,30 +382,15 @@ const ServiceDetail = () => {
         <Content>
           <h3>Brief information</h3>
           <Info>
-            {content.map((item, index) => {
-              const [ref, isInView] = useInView({ threshold: 0.1 });
-
-              return (
-                <Item
-                  key={index}
-                  ref={ref}
-                  active={activeIndex === index}
-                  visible={isInView}
-                  onClick={() => toggleAccordion(index)}
-                >
-                  <WrapperLine>
-                    <Number>{`0${index + 1}`}</Number>
-                    <Name>{item.title}</Name>
-                    <DropdownIcon active={activeIndex === index}>
-                      <FaSortDown />
-                    </DropdownIcon>
-                  </WrapperLine>
-                  <Description active={activeIndex === index}>
-                    {item.description}
-                  </Description>
-                </Item>
-              );
-            })}
+            {content.map((item, index) => (
+              <AccordionItem
+                key={index}
+                item={item}
+                index={index}
+                activeIndex={activeIndex}
+                toggleAccordion={toggleAccordion}
+              />
+            ))}
           </Info>
         </Content>
       </Detail>
