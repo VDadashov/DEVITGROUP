@@ -5,7 +5,6 @@ import atomIcon from "@assets/images/atom.png";
 import { useParams } from "react-router-dom";
 import { useInView } from "../../utils/hooks/useInView";
 
-
 const fadeSlideIn = keyframes`
   from {
     opacity: 0;
@@ -103,6 +102,10 @@ const Name = styled.span`
   letter-spacing: -0.5px;
   padding-left: 100px;
   flex-grow: 1;
+  @media only screen and (max-width: 600px) {
+    font-size: 20px;
+    padding-left: 50px !important;
+  }
 `;
 
 const DropdownIcon = styled.span`

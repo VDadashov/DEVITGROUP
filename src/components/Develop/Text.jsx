@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import theme from "../../styles/Theme";
+import { Link } from "react-router-dom";
 
 const Text = () => {
   return (
@@ -14,17 +15,17 @@ const Text = () => {
         </span>
       </StyledText>
       <StyledButton>
-        <button className="moreBtn">
+        <Link to="/about" className="moreBtn">
           <span>Learn More</span>
-        </button>
-        <button className="linkBtn">
+        </Link>
+        <Link to="/contact" className="linkBtn">
           <span>
             Contact Us
-            <span>
+            <a>
               <i class="fa-solid fa-arrow-up-long"></i>
-            </span>
+            </a>
           </span>
-        </button>
+        </Link>
       </StyledButton>
     </StyledSection>
   );
