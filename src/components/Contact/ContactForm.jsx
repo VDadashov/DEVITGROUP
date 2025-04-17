@@ -473,174 +473,78 @@ const StyledForm = styled.div`
   }
 
   @media only screen and (max-width: 660px) {
-    input::placeholder,
-    textarea::placeholder {
-      font-size: 12px;
-    }
-    form {
-      gap: 30px;
-      .form__info {
-        gap: 20px;
-        &__name {
-          gap: 10px;
-          input {
-            width: 225px;
-            padding: 12px 0;
-            padding-left: 15px;
-          }
-        }
-        &__email {
-          gap: 10px;
-          input {
-            width: 225px;
-            padding: 12px 0;
-            padding-left: 15px;
-          }
-        }
-      }
-      .form__subject {
+    gap: 30px;
+    .form__info {
+      gap: 20px;
+      &__name {
         gap: 10px;
-        #subject {
-          max-width: 480px;
-          height: 150px;
-          font-size: 16px;
-          padding-left: 25px;
-          padding-top: 15px;
+        input {
+          width: 230px;
+          padding: 12px 0;
+          padding-left: 15px;
         }
       }
-      button {
-        padding: 16px 24px;
-        width: 480px;
+      &__email {
+        gap: 10px;
+        input {
+          width: 230px;
+          padding: 12px 0;
+          padding-left: 15px;
+        }
       }
+    }
+    .form__subject {
+      gap: 10px;
+      #subject {
+        max-width: 540px;
+        height: 150px;
+        font-size: 16px;
+        padding-left: 25px;
+        padding-top: 15px;
+      }
+    }
+    button {
+      padding: 16px 24px;
+      width: 450px;
     }
   }
 
-  @media only screen and (max-width: 600px) {
-    input::placeholder,
-    textarea::placeholder {
-      font-size: 12px;
-    }
-    form {
-      gap: 30px;
-      .form__info {
-        gap: 20px;
-        &__name {
-          gap: 10px;
-          input {
-            width: 215px;
-            padding: 12px 0;
-            padding-left: 15px;
-          }
-        }
-        &__email {
-          gap: 10px;
-          input {
-            width: 215px;
-            padding: 12px 0;
-            padding-left: 15px;
-          }
-        }
-      }
-      .form__subject {
-        gap: 10px;
-        #subject {
-          max-width: 450px;
-          height: 150px;
-          font-size: 16px;
-          padding-left: 25px;
-          padding-top: 15px;
-        }
-      }
-      button {
-        padding: 16px 24px;
-        width: 450px;
-      }
-    }
-  }
 
-  @media only screen and (max-width: 480px) {
-    input::placeholder,
-    textarea::placeholder {
-      font-size: 10px;
-    }
-    form {
-      gap: 30px;
-      .form__info {
-        gap: 20px;
-        &__name {
-          gap: 10px;
-          input {
-            width: 150px;
-            padding: 12px 0;
-            padding-left: 15px;
-          }
-        }
-        &__email {
-          gap: 10px;
-          input {
-            width: 150px;
-            padding: 12px 0;
-            padding-left: 15px;
-          }
-        }
-      }
-      .form__subject {
-        gap: 10px;
-        #subject {
-          max-width: 350px;
-          height: 150px;
-          font-size: 16px;
-          padding-left: 25px;
-          padding-top: 15px;
-        }
-      }
-      button {
-        padding: 16px 24px;
-        width: 350px;
-      }
-    }
-  }
 
   @media only screen and (max-width: 400px) {
-    input::placeholder,
-    textarea::placeholder {
-      font-size: 10px;
-    }
-    form {
-      gap: 30px;
-      .form__info {
-        gap: 20px;
-        &__name {
-          gap: 10px;
-          input {
-            width: 150px;
-            padding: 12px 0;
-            padding-left: 15px;
-          }
-        }
-        &__email {
-          gap: 10px;
-          input {
-            width: 150px;
-            padding: 12px 0;
-            padding-left: 15px;
-          }
-        }
-      }
-      .form__subject {
+    gap: 30px;
+    .form__info {
+      gap: 20px;
+      &__name {
         gap: 10px;
-        #subject {
-          max-width: 320px;
-          height: 150px;
-          font-size: 16px;
-          padding-left: 25px;
-          padding-top: 15px;
+        input {
+          width: 150px;
+          padding: 12px 0;
+          padding-left: 15px;
         }
       }
-      button {
-        padding: 16px 24px;
-        width: 320px;
+      &__email {
+        gap: 10px;
+        input {
+          width: 150px;
+          padding: 12px 0;
+          padding-left: 15px;
+        }
       }
+    }
+    .form__subject {
+      gap: 10px;
+      #subject {
+        max-width: 540px;
+        height: 150px;
+        font-size: 16px;
+        padding-left: 25px;
+        padding-top: 15px;
+      }
+    }
+    button {
+      padding: 16px 24px;
+      width: 300px;
     }
   }
 `;

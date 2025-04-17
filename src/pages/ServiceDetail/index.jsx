@@ -29,6 +29,22 @@ const fadeIn = keyframes`
 
 const Wrapper = styled.section`
   margin: 120px 0;
+
+  @media (max-width: 1000px) {
+    margin: 90px 0;
+  }
+
+  @media (max-width: 800px) {
+    margin: 75px 0;
+  }
+
+  @media (max-width: 600px) {
+    margin: 60px 0;
+  }
+
+  @media (max-width: 500px) {
+    margin: 50px 0;
+  }
 `;
 
 const Detail = styled.div``;
@@ -44,6 +60,37 @@ const Head = styled.div`
     font-family: "Graphik-Regular400";
     font-size: 72px;
   }
+
+  @media (max-width: 1000px) {
+    h1 {
+      font-size: 60px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 800px) {
+    h1 {
+      font-size: 50px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    width: 60%;
+    margin: 0 auto 64px auto;
+
+    h1 {
+      font-size: 36px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    width: 60%;
+    margin: 0 auto 58px auto;
+
+    h1 {
+      font-size: 28px;
+    }
+  }
 `;
 
 const Icon = styled.div`
@@ -53,6 +100,15 @@ const Icon = styled.div`
   img {
     width: 100%;
     object-fit: cover;
+  }
+
+  @media (max-width: 800px) {
+    width: 65px;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 600px) {
+    width: 58px;
   }
 `;
 
@@ -65,7 +121,28 @@ const Content = styled.div`
     margin: 86px 0;
     font-family: "Graphik-Regular400";
     font-size: 46px;
-    letter-spacing: -1;
+    letter-spacing: -1px;
+  }
+
+  @media (max-width: 900px) {
+    h3 {
+      font-size: 30px;
+      margin: 64px 0;
+    }
+  }
+
+  @media (max-width: 700px) {
+    h3 {
+      font-size: 24px;
+      margin: 48px 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    h3 {
+      font-size: 20px;
+      margin: 28px 0 48px 0;
+    }
   }
 `;
 
@@ -78,10 +155,15 @@ const Item = styled.div`
   border-top: 1px solid #dbe0e4;
   padding: 28px 0;
   width: 100%;
-  height: ${({ active }) => (active ? "auto" : "93.6px")};
+  min-height: ${({ active }) => (active ? "auto" : "93.6px")};
   transition: all 0.3s ease;
   opacity: ${({ visible }) => (visible ? 1 : 0)};
   animation: ${({ visible }) => (visible ? fadeIn : "none")} 0.8s ease forwards;
+
+  @media only screen and (max-width: 600px) {
+    padding: 16px 0;
+    min-height: 40px !important;
+  }
 `;
 
 const WrapperLine = styled.div`
@@ -94,6 +176,10 @@ const Number = styled.span`
   font-family: "Graphik-Regular400";
   color: rgb(127, 129, 133);
   line-height: 35px;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 14px;
+  }
 `;
 
 const Name = styled.span`
@@ -102,9 +188,14 @@ const Name = styled.span`
   letter-spacing: -0.5px;
   padding-left: 100px;
   flex-grow: 1;
-  @media only screen and (max-width: 600px) {
+
+  @media only screen and (max-width: 800px) {
     font-size: 20px;
     padding-left: 50px !important;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
+    padding-left: 40px !important;
   }
 `;
 
@@ -114,6 +205,10 @@ const DropdownIcon = styled.span`
   transition: all 0.2s ease;
   font-family: "Graphik-Regular400";
   transform: ${({ active }) => (active ? "rotate(-180deg)" : "rotate(0deg)")};
+
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
+  }
 `;
 
 const Description = styled.div`
@@ -125,6 +220,17 @@ const Description = styled.div`
   display: ${({ active }) => (active ? "block" : "none")};
   animation: ${({ active }) => (active ? fadeSlideIn : "none")} 0.3s ease
     forwards;
+
+  @media only screen and (max-width: 800px) {
+    font-size: 14px;
+    margin-left: 75px !important;
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding-top: 0.3rem;
+    margin-left: 55px !important;
+    padding-right: 40px;
+  }
 `;
 
 const Branding = [
@@ -376,7 +482,7 @@ const ServiceDetail = () => {
           <Icon>
             <img src={atomIcon} alt="atom" />
           </Icon>
-          <h1>{type?.replace("-", " ")} Projects</h1>
+          <h1>{type?.replace("-", " ")}</h1>
         </Head>
 
         <Content>

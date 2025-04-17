@@ -9,25 +9,23 @@ import AnimatedSection from "../../components/common/AnimatedSection";
 const Home = () => {
   return (
     <>
-      <AnimatedSection>
-        <BrandSection />
-      </AnimatedSection>
+      <BrandSection />
 
-      <AnimatedSection>
+      {/* <AnimatedSection> */}
         <Develop />
-      </AnimatedSection>
+      {/* </AnimatedSection> */}
 
-      <AnimatedSection>
+      {/* <AnimatedSection> */}
         <WelcomeToMy />
-      </AnimatedSection>
+      {/* </AnimatedSection> */}
 
-      <AnimatedSection>
+      {/* <AnimatedSection> */}
         <MasteryArea />
-      </AnimatedSection>
+      {/* </AnimatedSection> */}
 
-      <AnimatedSection>
+      {/* <AnimatedSection> */}
         <Subscription />
-      </AnimatedSection>
+      {/* </AnimatedSection> */}
     </>
   );
 };

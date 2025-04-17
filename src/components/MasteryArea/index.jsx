@@ -8,6 +8,7 @@ import icon6 from "@assets/images/6.svg";
 import icon7 from "@assets/images/7.svg";
 import StyledImage from "../../styles/common/Image";
 import { Container } from "../../styles/common/container";
+import { Link } from "react-router-dom";
 
 
 const StyledMasteryArea = styled.div`
@@ -358,7 +359,7 @@ const StyledTextLineTitle = styled.span`
   }
 `;
 
-const StyledMasteryAreaItem = styled.a`
+const StyledMasteryAreaItem = styled.div`
   color: #fff;
   background-color: ${({ $isDefault }) => ($isDefault ? "#fff" : "#181a20")};
   border: ${({ $isDefault }) =>
@@ -373,7 +374,17 @@ const StyledMasteryAreaItem = styled.a`
   overflow: hidden;
   display: inline-block;
   transition: all 0.7s ease;
-  z-index: 1;
+  z-index: 2;
+
+  a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
 
   @media (max-width: 850px) {
     display: ${({ $isDefault }) => ($isDefault ? "none" : "inline-block")};
@@ -528,7 +539,7 @@ const StyledMasteryAreaItem = styled.a`
   .arrow {
     transition: transform 0.7s ease;
     position: relative;
-    z-index: 1;
+    // z-index: 3;
   }
 
   span.icon {
@@ -646,13 +657,13 @@ const MasteryArea = () => {
         </StyledMasteryAreaTitle>
         <StyledMasteryAreaContent>
           <StyledMasteryAreaItem
-            href="/service-detail/CRM"
             $isDefault={false}
             $hoverColor="#fcfeac"
             $right="42.5%"
             $top="27%"
             className="icon1"
           >
+            <Link to="/service-detail/CRM" />
             <span className="icon">
               <StyledImage
                 src={icon1}
@@ -668,13 +679,13 @@ const MasteryArea = () => {
             </span>
           </StyledMasteryAreaItem>
           <StyledMasteryAreaItem
-            href="/service-detail/Branding"
             $isDefault={false}
             $hoverColor="#94D8FE"
             $left="35%"
             $top="40%"
             className="icon2"
           >
+            <Link to="/service-detail/Branding" />
             <span className="icon">
               <StyledImage
                 src={icon2}
@@ -690,13 +701,13 @@ const MasteryArea = () => {
             </span>
           </StyledMasteryAreaItem>
           <StyledMasteryAreaItem
-            href="/service-detail/Web-Design"
             $isDefault={false}
             $hoverColor="#D3FE"
             $left="55%"
             $top="40%"
             className="icon7"
           >
+            <Link to="/service-detail/Web-Design" />
             <span className="icon">
               <StyledImage
                 src={icon7}
@@ -712,13 +723,13 @@ const MasteryArea = () => {
             </span>
           </StyledMasteryAreaItem>
           <StyledMasteryAreaItem
-            href="/service-detail/App-design"
             $isDefault={false}
             $hoverColor="#FEA1B2"
             $left="55%"
             $top="55%"
             className="icon3"
           >
+            <Link to="/service-detail/App-Design" />
             <span className="icon">
               <StyledImage
                 src={icon3}
@@ -734,13 +745,13 @@ const MasteryArea = () => {
             </span>
           </StyledMasteryAreaItem>
           <StyledMasteryAreaItem
-            href="/service-detail/Web-Design"
             $isDefault={false}
             $hoverColor="#F3B0FE"
             $left="32%"
             $top="55%"
             className="icon4"
           >
+            <Link to="/service-detail/Web-Design" />
             <span className="icon">
               <StyledImage
                 src={icon4}
@@ -756,13 +767,13 @@ const MasteryArea = () => {
             </span>
           </StyledMasteryAreaItem>
           <StyledMasteryAreaItem
-            href="/service-detail/ui-ux"
             $isDefault={false}
             $hoverColor="#85FED3"
             $left="43%"
             $top="67%"
             className="icon6"
           >
+            <Link to="/service-detail/ui-ux" />
             <span className="icon">
               <StyledImage
                 src={icon6}

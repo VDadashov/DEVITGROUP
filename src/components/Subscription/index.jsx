@@ -7,11 +7,17 @@ import { useNavigate } from "react-router-dom";
 const StyledSubscription = styled.div`
   background: #f2f2f2;
   border-radius: 50px;
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   margin: 0 0 64px !important;
   padding: 32px 48px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: start;
+    padding: 26px 42px;
+  }
 
   h6 {
     font-size: 24px;
@@ -30,6 +36,11 @@ const StyledSubscription = styled.div`
     font-family: "Graphik-Regular400";
     text-align: left;
     color: rgb(20, 20, 20);
+
+    @media (max-width: 600px) {
+      font-size: 17px;
+    }
+
   }
 `;
 
@@ -99,7 +110,7 @@ const Subscription = () => {
   return (
     <Container>
       <StyledSubscription>
-        <div>
+        <div className='textContainer'>
           <h6>Join the inner circle</h6>
           <p>
             Subscribe for insights, case studies, and updates from the expert

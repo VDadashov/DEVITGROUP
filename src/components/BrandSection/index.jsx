@@ -2,12 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledBrandSection = styled.div`
-    margin: 180px 0 80px;
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-    text-align: center;
-`
+  margin: 180px 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media (max-width: 900px) {
+    margin: 120px 0 80px;
+  }
+
+  @media (max-width: 700px) {
+    margin: 100px 0 60px;
+  }
+`;
 const StyledBrandTitle = styled.h1`
   font-size: 86px;
   font-weight: 600;

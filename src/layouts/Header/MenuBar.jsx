@@ -26,6 +26,7 @@ const MenuBar = ({ isOpen, setIsOpen }) => {
               </p>
               <Dropdown
                 style={{
+                  display: isDropdownOpen ? "flex" : "none",
                   opacity: isDropdownOpen ? 1 : 0,
                   transform: isDropdownOpen
                     ? "translateY(0)"
@@ -75,13 +76,13 @@ const MenuBar = ({ isOpen, setIsOpen }) => {
 const StyledMenuBar = styled.div`
   cursor: pointer;
   display: none;
+  position: absolute;
+  z-index: 1000;
   @media only screen and (max-width: 650px) {
     background: #fff;
     width: 250px;
     height: 300px;
-    position: fixed;
     right: 50%;
-    z-index: 1000;
     top: 10vh;
     transform: translateX(50%);
     display: flex;
@@ -98,7 +99,7 @@ const StyledMenuList = styled.ul`
   flex-direction: column;
   padding-left: 60px;
   gap: 20px;
-  z-index: 1001;
+  position:absolute;
   li {
     a {
       text-decoration: none;
@@ -140,17 +141,24 @@ const Dropdown = styled.ul`
   list-style: none;
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(-10px);
+  opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
+  transform: ${({ isOpen }) =>
+    isOpen ? "translateY(0)" : "translateY(-10px)"};
+  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+  flex-direction: column;
   transition: opacity 0.3s ease, transform 0.3s ease;
+
   li {
     padding: 10px 14px;
+
     &:hover {
       background: #f0f0f0;
     }
+
     a {
       font-size: 1.5rem;
     }
   }
 `;
+
 export default MenuBar;
