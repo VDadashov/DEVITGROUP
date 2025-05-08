@@ -8,9 +8,7 @@ const SubscribeButton = () => {
   return (
     <StyledWrapper onClick={() => navigate("/subscribe")}>
       <button>
-        <span>
-          Subscribe
-        </span>
+        <span>Subscribe</span>
       </button>
     </StyledWrapper>
   );
@@ -73,6 +71,14 @@ const StyledWrapper = styled.div`
 
   button:hover::before {
     transform: translate3d(100%, 0, 0);
+  }
+  @media only screen and (max-width: 700px) {
+    button {
+      padding: 5px 15px;
+    }
+    button span {
+      font-size: 14px;
+    }
   }
   @media only screen and (max-width: 650px) {
     display: none;

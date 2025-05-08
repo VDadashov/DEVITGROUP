@@ -74,8 +74,17 @@ const StyledWrapper = styled.div`
   button:hover::before {
     transform: translate3d(100%, 0, 0);
   }
+  @media only screen and (max-width: 700px) {
+    button {
+      padding: 6px 22px;
+      font-size: 14px;
+    }
+  }
   @media only screen and (max-width: 650px) {
     display: none;
+      button span i {
+    font-size: 12px;
+  }
   }
 `;
 

@@ -13,11 +13,14 @@ const StyledNavbar = styled.nav`
     padding: 0;
     margin: 0;
   }
-
+    @media (max-width: 700px) {
+      ul {
+        gap: 10px;
+      }
+    }
   li {
     position: relative;
     font-size: 1rem;
-
     a {
       position: relative;
       display: inline-flex;
@@ -95,7 +98,6 @@ const StyledNavbar = styled.nav`
     font-size: 0.6rem;
     margin-top: 5px;
   }
-
   @media only screen and (max-width: 650px) {
     display: none;
   }

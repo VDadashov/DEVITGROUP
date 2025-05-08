@@ -6,7 +6,6 @@ import Button from "./contact";
 import Menu from "./Menu";
 import { Container } from "../../styles/common/container";
 import SubscribeButton from "./Subscribe";
-import MenuBar from "./MenuBar";
 
 const StyledHeader = styled.header`
   display: flex;
@@ -20,12 +19,17 @@ const StyledList = styled.div`
   display:flex;
   gap:20px;
   align-items:center;
+  @media (max-width: 700px) {
+    gap: 10px;
+  }
 `
 
 
 const Header = () => {
 
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDrawer = () => setIsOpen(!isOpen);
 
   return (
     <Container>
@@ -37,7 +41,6 @@ const Header = () => {
           <Button />
         </StyledList>
         <Menu isOpen={isOpen} setIsOpen={setIsOpen}  />
-        <MenuBar isOpen={isOpen} setIsOpen={setIsOpen} />
       </StyledHeader>
     </Container>
   );
