@@ -21,22 +21,11 @@ const Menu = ({ isOpen, setIsOpen }) => {
         <DrawerWrapper>
           <DrawerPanel open={isOpen}>
             <StyledMenuList>
-              <li
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                style={{ display: "flex", flexDirection: "column" }}
-              >
+              <li onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
                 <p>
                   Services <i className="fa-solid fa-arrow-right"></i>
                 </p>
-                <Dropdown
-                  style={{
-                    display: isDropdownOpen ? "flex" : "none",
-                    opacity: isDropdownOpen ? 1 : 0,
-                    transform: isDropdownOpen
-                      ? "translateY(0)"
-                      : "translateY(-10px)",
-                  }}
-                >
+                <Dropdown isOpen={isDropdownOpen}>
                   <li>
                     <Link to="/service-detail/CRM">Business Automation</Link>
                   </li>
@@ -107,44 +96,28 @@ const ToggleButton = styled.button`
   }
 `;
 
-const StyledMenu = styled.div`
-  i {
-    font-size: ${({ theme }) => theme.fontSize.md};
-    padding: 8px;
-    border: 1px solid #000;
-    border-radius: ${({ theme }) => theme.radius.full};
-  }
-  @media only screen and (min-width: 650px) {
-    display: none;
-  }
-`;
-
 const StyledMenuList = styled.ul`
+  cursor: pointer;
   padding-top: 200px;
   list-style: none;
   display: flex;
   flex-direction: column;
   padding-left: 60px;
   gap: 20px;
-  position: absolute;
-  cursor: pointer;
   text-align: start;
   li {
-    a {
-      text-decoration: none;
-      color: #000;
-      font-size: 1.7rem;
-      text-align: start;
-      i {
-        font-size: 1.5rem;
-      }
-    }
+    position: relative;
+
+    a,
     p {
       text-decoration: none;
       color: #000;
       font-size: 1.7rem;
-      text-align: start;
+      display: flex;
+      align-items: center;
+
       i {
+        margin-left: 8px;
         font-size: 1.5rem;
       }
     }
@@ -152,33 +125,34 @@ const StyledMenuList = styled.ul`
 `;
 
 const Dropdown = styled.ul`
-  display: none;
+  position: absolute;
   top: 100%;
   left: 0;
-  margin-top: 8px;
-  list-style: none;
+  z-index: 100;
+  margin-top: 10px;
   padding: 10px 0;
+  list-style: none;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  min-width: 220px;
+
+  display: flex;
+  flex-direction: column;
   opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
   transform: ${({ isOpen }) =>
     isOpen ? "translateY(0)" : "translateY(-10px)"};
   pointer-events: ${({ isOpen }) => (isOpen ? "auto" : "none")};
-  display: flex;
-  flex-direction: column;
-  border-radius: 6px;
-  min-width: 180px;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  align-items: start;
-  text-align: start;
   li {
-    padding: 10px 14px;
+    padding: 12px 16px;
     cursor: pointer;
-    transition: background 0.2s ease;
     a {
       text-decoration: none;
       color: #333;
       font-size: 1.5rem;
-      display: block;
       width: 100%;
+      display: block;
     }
   }
 `;

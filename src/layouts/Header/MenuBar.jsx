@@ -55,3 +55,44 @@
 // `;
 
 // export default MenuBar;
+//  <StyledMenuList>
+//             <li
+//               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+//               style={{ position: "relative" }}
+//             >
+//               <p>
+//                 Services <i className="fa-solid fa-arrow-right"></i>
+//               </p>
+//               <Dropdown
+//                 style={{
+//                   display: isDropdownOpen ? "flex" : "none",
+//                   opacity: isDropdownOpen ? 1 : 0,
+//                   transform: isDropdownOpen
+//                     ? "translateY(0)"
+//                     : "translateY(-10px)",
+//                 }}
+//               >
+//                 <li>
+//                   <Link to="/service-detail/CRM">Business Automation</Link>
+//                 </li>
+//                 <li>
+//                   <Link to="/service-detail/Branding">Branding</Link>
+//                 </li>
+//                 <li>
+//                   <Link to="/service-detail/Web-Design">Web Design</Link>
+//                 </li>
+//                 <li>
+//                   <Link to="/service-detail/App-design">App Design</Link>
+//                 </li>
+//                 <li>
+//                   <Link to="/service-detail/ui-ux">UI/UX Design</Link>
+//                 </li>
+//               </Dropdown>
+//             </li>
+//             <li>
+//               <Link to="/portfolio">Projects</Link>
+//             </li>
+//             <li>
+//               <Link to="/about">About</Link>
+//             </li>
+//           </StyledMenuList>
